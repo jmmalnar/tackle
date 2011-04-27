@@ -1,39 +1,35 @@
 <div class="block">
   <div class="secondary-navigation">
     <ul class="wat-cf">
-      <li class="first active"><%= link_to "#{t("web-app-theme.list", :default => "List")}", tickets_path  %></li>
-      <li><%= link_to "#{t("web-app-theme.new", :default => "New Story")}", new_story_path %></li>
-      <li><%= link_to "#{t("web-app-theme.new", :default => "New Task")}", new_task_path %></li>
-      <li><%= link_to "#{t("web-app-theme.new", :default => "New Bug")}", new_bug_path %></li>
+      <li class="first active"><%= link_to "List", tickets_path  %></li>
+      <li><%= link_to "New Story", new_story_path %></li>
+      <li><%= link_to "New Task", new_task_path %></li>
+      <li><%= link_to "New Bug", new_bug_path %></li>
     </ul>
   </div>          
   <div class="content">          
-    <h2 class="title"><%= t("web-app-theme.all", :default => "All")  %> Tickets</h2>
+    <h2 class="title">All Tickets</h2>
     <div class="inner">
       <table class="table">
         <tr>             
           <th class="first">ID</th>
-                    <th>
-            <%= t("activerecord.attributes.ticket.type", :default => t("activerecord.labels.type", :default => "Type")) %>
-          </th>
-                    <th><%= t("web-app-theme.created_at", :default => "Created at")  %></th>
-          <th class="last">&nbsp;</th>
+          <th>Title</th>
+          <th>Type</th>
+          <th class="last">Created at</th>
         </tr>
         <% @tickets.each do |ticket| -%>
         <tr class="<%= cycle("odd", "even") %>">
           <td>
             <%= ticket.id %>
           </td>
-                    <td>
-            <%= link_to ticket.type, ticket_path(ticket) %>
+          <td>
+            <%= link_to ticket.title, edit_ticket_path_by_type(ticket) %>
           </td>
-                    <td>
-            <%= ticket.created_at %>
+          <td>
+            <%= ticket.type %>
           </td>
           <td class="last">
-            <%= link_to "#{t("web-app-theme.show", :default => "Show")}", ticket_path(ticket) %> |
-            <%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_ticket_path(ticket) %> |
-            <%= link_to "#{t("web-app-theme.delete", :default => "Delete")}", ticket_path(ticket), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+            <%= ticket.created_at %>
           </td>
         </tr>          
         <% end -%>
@@ -41,7 +37,7 @@
       <div class="actions-bar wat-cf">
         <div class="actions">
         </div>
-        
+        <%= paginate @tickets %>
       </div>
     </div>
   </div>

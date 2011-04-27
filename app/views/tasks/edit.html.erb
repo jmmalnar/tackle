@@ -3,14 +3,14 @@
     <ul class="wat-cf">
       <li class="first"><%= link_to "List", tickets_path  %></li>
       <li><%= link_to "New Story", new_story_path %></li>
-      <li class="active"><%= link_to "New Task", new_task_path %></li>
+      <li><%= link_to "New Task", new_task_path %></li>
       <li><%= link_to "New Bug", new_bug_path %></li>
     </ul>
   </div>          
   <div class="content">            
-    <h2 class="title">New  Task</h2>
+    <h2 class="title">Edit Task</h2>
     <div class="inner">
-      <%= form_for :task, :url => tasks_path, :html => { :class => :form } do |f| -%>
+      <%= form_for @task, :url => task_path(@task), :html => { :class => :form } do |f| -%>
         <%= render :partial => "tickets/form", :locals => {:f => f} %>
       <% end -%>
     </div>

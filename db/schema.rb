@@ -10,14 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110426203158) do
+ActiveRecord::Schema.define(:version => 20110427203158) do
+
+  create_table "select_fixed_in_versions", :force => true do |t|
+    t.string "value"
+  end
 
   create_table "tickets", :force => true do |t|
     t.string   "type"
     t.string   "title"
     t.string   "description"
+    t.integer  "select_fixed_in_versions_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "lock_version",                :default => 0
   end
 
 end

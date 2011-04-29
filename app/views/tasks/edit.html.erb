@@ -9,8 +9,8 @@
   </div>          
   <div class="content">            
     <h2 class="title">Edit Task</h2>
-    <div class="inner">
-      <%= form_for @task, :url => task_path(@task), :html => { :class => :form } do |f| -%>
+    <div class="inner">      
+    <%= form_for @task, :url => task_path(@task), :html => { :class => :form } do |f| -%>
         <%= render :partial => "tickets/form", :locals => {:f => f} %>
       <% end -%>
     </div>

@@ -4,6 +4,9 @@ Ticketing::Application.routes.draw do
   resources :stories
   resources :bugs
   resources :tasks
+  
+  match "/auth/github/callback" => "sessions#create"
+  match "/logout" => "sessions#destroy"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

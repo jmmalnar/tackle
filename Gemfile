@@ -7,6 +7,7 @@ gem 'rails', '3.0.7'
 
 gem 'mysql2'
 gem 'kaminari'
+gem 'omniauth'
 
 # Use unicorn as the web server
 # gem 'unicorn'

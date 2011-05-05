@@ -3,3 +3,6 @@ ActiveRecord::Base.connection.execute("TRUNCATE select_fixed_in_versions")
   SelectFixedInVersion.create!(:value => value)
 end
 
+ActiveRecord::Base.connection.execute("TRUNCATE users")
+User.create!(:nickname => "dougjohnson", :email => "doug.johnson@sage.com", :is_admin => true)
+

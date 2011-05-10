@@ -2,4 +2,19 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  #Ticket States
+  open: 'Open'
+  in_dev: 'In Development'
+  stopped: 'Stopped'
+  in_test: 'In Test'
+  failed_test: 'Failed Test'
+  closed: 'Closed'
+  reopened: 'Reopened'
+  
+  #Ticket Events
+  start_dev: 'Start Development'
+  stop_dev: 'Stop Development'
+  finish_dev: 'Finish Development'
+  fail_test: 'Fail Test'
+  pass_test: 'Pass Test'
+  reopen: 'Reopen'

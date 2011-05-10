@@ -3,20 +3,20 @@
 development:
   adapter: mysql2
   encoding: utf8
-  database: ticketing_development
+  database: tackle_development
   pool: 5
   username: root
   password: admin
-  socket: /tmp/mysql.sock
+  socket: /var/run/mysqld/mysqld.sock
 
 test:
   adapter: mysql2
   encoding: utf8
-  database: ticketing_test
+  database: tackle_test
   pool: 5
   username: root
   password: admin
-  socket: /tmp/mysql.sock
+  socket: /var/run/mysqld/mysqld.sock
 
 production:
   adapter: sqlite3

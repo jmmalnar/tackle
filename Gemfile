@@ -8,6 +8,7 @@ gem 'rails', '3.0.7'
 gem 'mysql2'
 gem 'kaminari'
 gem 'omniauth'
+gem 'state_machine'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -33,4 +34,5 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'web-app-theme', '>= 0.6.2'
+  gem 'ruby-graphviz', :require => 'graphviz'
 end

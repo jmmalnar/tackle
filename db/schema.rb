@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20110503203627) do
     t.string   "type"
     t.string   "title"
     t.string   "description"
+    t.string   "state"
     t.integer  "select_fixed_in_versions_id"
     t.datetime "created_at"
     t.datetime "updated_at"

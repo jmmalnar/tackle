@@ -1,4 +1,4 @@
-class User < ActiveRecord::Base
+class User < ActiveRecord::Base  
   def self.create_with_omniauth(auth)  
     user = find_by_nickname(auth["user_info"]["nickname"]) || return
     user.provider = auth["provider"]  

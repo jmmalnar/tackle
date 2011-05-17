@@ -1,2 +1,0 @@
-class Story < Ticket
-end

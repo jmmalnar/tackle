@@ -1,9 +1,5 @@
 Ticketing::Application.routes.draw do
-  #get "tickets/index"
   resources :tickets
-  resources :stories
-  resources :bugs
-  resources :tasks
   
   match "/auth/github/callback" => "sessions#create"
   match "/logout" => "sessions#destroy"

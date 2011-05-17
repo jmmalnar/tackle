@@ -10,7 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110503203627) do
+ActiveRecord::Schema.define(:version => 20110512203628) do
+
+  create_table "comments", :force => true do |t|
+    t.string   "text"
+    t.integer  "user_id"
+    t.integer  "ticket_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "select_fixed_in_versions", :force => true do |t|
     t.string "value"
@@ -21,10 +29,12 @@ ActiveRecord::Schema.define(:version => 20110503203627) do
     t.string   "title"
     t.string   "description"
     t.string   "state"
-    t.integer  "select_fixed_in_versions_id"
+    t.integer  "feature_id"
+    t.integer  "task_id"
+    t.integer  "select_fixed_in_version_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "lock_version",                :default => 0
+    t.integer  "lock_version",               :default => 0
   end
 
   create_table "users", :force => true do |t|

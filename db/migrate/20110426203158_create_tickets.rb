@@ -5,7 +5,9 @@ class CreateTickets < ActiveRecord::Migration
       t.string        :title                    # All
       t.string        :description              # All
       t.string        :state                    # All
-      t.references    :select_fixed_in_versions # Bug
+      t.references    :feature                  # Tasks & Bugs
+      t.references    :task                     # Bugs
+      t.references    :select_fixed_in_version  # Bugs  --- this shouldn't be an ID - it should be as string. The values in the dropdown should come from git
       t.timestamps
       t.integer       :lock_version, :default => 0
     end

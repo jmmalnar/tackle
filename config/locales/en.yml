@@ -8,6 +8,8 @@ en:
   stopped: 'Stopped'
   in_test: 'In Test'
   failed_test: 'Failed Test'
+  failed_retest_on_trunk: 'Failed Retest on Trunk'
+  invalid: 'Invalid'
   closed: 'Closed'
   reopened: 'Reopened'
   
@@ -18,3 +20,5 @@ en:
   fail_test: 'Fail Test'
   pass_test: 'Pass Test'
   reopen: 'Reopen'
+  retest_on_trunk: 'Retest on Trunk'
+  make_invalid: 'Mark as Invalid'

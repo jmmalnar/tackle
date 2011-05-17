@@ -2,15 +2,15 @@
   <div class="secondary-navigation">
     <ul class="wat-cf">
       <li class="first"><%= link_to "List", tickets_path  %></li>
-      <li><%= link_to "New Story", new_story_path %></li>
-      <li><%= link_to "New Task", new_task_path %></li>
-      <li><%= link_to "New Bug", new_bug_path %></li>
+      <li><%= link_to "New Feature", new_ticket_path(:type => "Feature") %></li>
+      <li><%= link_to "New Task", new_ticket_path(:type => "Task") %></li>
+      <li><%= link_to "New Bug", new_ticket_path(:type => "Bug") %></li>
     </ul>
   </div>          
   <div class="content">            
-    <h2 class="title">Edit Bug</h2>
+    <h2 class="title">Edit <%= @ticket.type %> #<%= @ticket.id %></h2>
     <div class="inner">
-    <%= form_for @bug, :html => { :class => :form } do |f| -%>
+    <%= form_for @ticket, :url => ticket_path(:type => @ticket.type), :html => { :class => :form } do |f| -%>
         <%= render :partial => "tickets/form", :locals => {:f => f} %>
       <% end -%>  
     </div>

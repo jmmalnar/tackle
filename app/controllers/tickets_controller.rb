@@ -26,7 +26,7 @@ class TicketsController < ApplicationController
   
   def update
     @ticket = Ticket.find(params[:id])
-    
+    @ticket.send params[:event][:fire] if @ticket.state_events.include? params[:event][:fire].to_sym
     respond_to do |format|
       if @ticket.update_attributes(params[@ticket.type.downcase])
         format.html { redirect_to(tickets_path,

@@ -16,7 +16,7 @@
           <th>Title</th>
           <th>Type</th>
           <th>Status</th>
-          <th class="last">Created at</th>
+          <th class="last">Created</th>
         </tr>
         <% @tickets.each do |ticket| -%>
         <tr class="<%= cycle("odd", "even") %>">
@@ -32,8 +32,8 @@
           <td>
             <%= t ticket.state%>
           </td>
-          <td class="last">
-            <%= ticket.created_at %>
+          <td>
+            <%= "#{time_ago_in_words ticket.created_at} ago"%>
           </td>
         </tr>          
         <% end -%>

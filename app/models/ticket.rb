@@ -7,15 +7,15 @@ class Ticket < ActiveRecord::Base
     before_transition :on => :start_dev, :do => :say_hello
     
     event :start_dev do      
-      transition [:open, :failed_test, :failed_retest_on_trunk, :stopped, :reopened, :invalid] => :in_dev
+      transition [:open, :failed_test, :failed_retest_on_trunk, :paused, :reopened, :invalid] => :in_dev
     end
     
     event :make_invalid do
-      transition [:open, :stopped] => :invalid
+      transition [:open, :paused] => :invalid
     end
     
-    event :stop_dev do
-      transition :in_dev => :stopped
+    event :pause_dev do
+      transition :in_dev => :paused
     end
     
     event :finish_dev do

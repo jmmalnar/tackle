@@ -5,7 +5,7 @@ en:
   #Ticket States
   open: 'Open'
   in_dev: 'In Development'
-  stopped: 'Stopped'
+  paused: 'Paused'
   in_test: 'In Test'
   failed_test: 'Failed Test'
   failed_retest_on_trunk: 'Failed Retest on Trunk'
@@ -15,7 +15,7 @@ en:
   
   #Ticket Events
   start_dev: 'Start Development'
-  stop_dev: 'Stop Development'
+  pause_dev: 'Pause Development'
   finish_dev: 'Finish Development'
   fail_test: 'Fail Test'
   pass_test: 'Pass Test'

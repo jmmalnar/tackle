@@ -1,0 +1,13 @@
+<div class="group">
+  <%= f.label :action_id, "Action:", :class => :label %>
+  <div>
+    <%= radio_button "event", :fire, false, :checked => true  %>
+    <%= f.label :state, "Leave as \"#{t @ticket.state}\"", :class => :radio%>
+  </div>
+  <% @ticket.state_events.each do |event| %>
+  <div>
+    <%= radio_button "event", :fire, event %>
+    <%= f.label :state, t(event), :class => :radio %>
+  </div>
+  <% end %>
+</div>

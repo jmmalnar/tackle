@@ -8,10 +8,10 @@
     </ul>
   </div>          
   <div class="content">            
-    <h2 class="title">Edit <%= @ticket.type %> #<%= @ticket.id %></h2>
+    <h2 class="title"><%= @ticket.type %> #<%= @ticket.id %></h2>
     <div class="inner">
     <%= form_for @ticket, :url => ticket_path(:type => @ticket.type), :html => { :class => :form } do |f| -%>
-        <%= render :partial => "tickets/form", :locals => {:f => f} %>
+        <%= render :partial => "form", :locals => {:f => f} %>
       <% end -%>  
     </div>
   </div>

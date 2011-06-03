@@ -35,4 +35,5 @@ group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'web-app-theme', '>= 0.6.2'
   gem 'ruby-graphviz', :require => 'graphviz'
+  gem 'spork', '~> 0.9.0.rc'
 end

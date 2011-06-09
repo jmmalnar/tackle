@@ -1,5 +1,6 @@
 Ticketing::Application.routes.draw do
   resources :tickets
+  resources :users
   
   match "/auth/github/callback" => "sessions#create"
   match "/logout" => "sessions#destroy"

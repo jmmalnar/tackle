@@ -27,8 +27,9 @@
       </div>
       <div id="main-navigation">
         <ul class="wat-cf">
-          <li class="first active"><a href="#">Tickets</a></li>
+          <li class="first<%= ' active' if params[:controller] == 'tickets' %>"><%= link_to "Tickets", tickets_path  %></li>
           <li><a href="#">Sprint</a></li>
+          <li<%= ' class=active' if params[:controller] == 'users' %>><%= link_to "Users", users_path  %></li>
         </ul>
       </div>
     </div>    

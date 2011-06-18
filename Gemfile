@@ -5,7 +5,6 @@ gem 'rails', '3.0.7'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
 gem 'kaminari'
 gem 'omniauth'
 gem 'state_machine', '>= 1.0.0'
@@ -36,4 +35,6 @@ group :development, :test do
   gem 'web-app-theme', '>= 0.6.2'
   gem 'ruby-graphviz', :require => 'graphviz'
   gem 'spork', '~> 0.9.0.rc'
+  gem 'heroku'
+  gem 'mysql2'
 end
